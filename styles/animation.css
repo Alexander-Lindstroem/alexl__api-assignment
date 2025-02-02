@@ -1,0 +1,12 @@
+.country__loading-screen p::after {
+    content: ".";
+    position: absolute;
+    animation: loading 0.5s steps(4) infinite;
+}
+
+@keyframes loading {
+    0% {content: "."}
+    25% {content: ".."}
+    50% {content: "..."}
+    75% {content: ""}
+}

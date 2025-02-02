@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    transform-box: fill-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+path {
+    user-select: all;
+}
+
+.main {
+    width: 100%;
+}
+
+.map {
+    position: absolute;
+    overflow: visible;
+    transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.search {
+    display: block;
+}
+
+.search__container {
+    padding: 16px;
+    position: fixed;
+    z-index: 100;
+    width: 33%;
+    min-height: 100%;
+    opacity: 0.7;
+    background-color:white;
+    overflow: scroll;
+}
+
+.search__title {
+    margin: 0;
+    text-align: center;
+}
+
+.search__form {
+    width: 100%;
+    padding: 8px;
+    font-size: 1.2rem;
+}
+
+.search__list {
+    overflow: scroll;
+}
+
+.list-item {
+    padding: 8px;
+    background-color: grey;
+    border-color: black;
+    border-width: 1px 2px;
+    border-style: solid;
+    user-select: none;
+}
+
+.list-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.country {
+    display: none;
+}
+
+.country__container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    position: fixed;
+    width: 33%;
+    min-height: 100%;
+    left: 0;
+    z-index: 150;
+    background-color: white;
+    opacity: 0.7;
+}
+
+.selected-country {
+    fill: #003153;
+    stroke-width: 2px;
+}
+
+.country__name h2 {
+    margin: 16px;
+    text-align: center;
+    position: relative;
+}
+
+.country__images {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60% 1fr;
+    gap: 32px;
+    margin: 0 32px;
+}
+
+.country__images div p { 
+    text-align: center;
+    font-weight: 600;
+}
+
+.country__images img:nth-of-type(1) {
+    align-self: center;
+}
+
+.country__information .title {
+    font-weight: 600;
+}
+
+.country__information p {
+    margin: 8px 0;
+}
+
+.country__back-button {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.country__back-button button {
+    padding: 16px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border: 0;
+    border-radius: 10px;
+}
+
+.country__loading-screen p {
+    user-select: none;
+    font-weight: 600;
+}
+
+.country__loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    z-index: 200;
+    width: 33%;
+    min-height: 100%;
+    padding: 32px;
+}
