@@ -33,7 +33,11 @@ const setPosition = (countryID) => {
 
 const initialMapPosition = () => {
     let savedPosition = localStorage.getItem("position")
-    setPosition(savedPosition)
+    if (savedPosition) {
+        setPosition(savedPosition)
+    } else {
+        setPosition("DE")
+    }
 }
 
 const initialSearchBarQuery = () => {
