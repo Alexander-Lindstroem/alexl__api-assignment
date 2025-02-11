@@ -109,7 +109,8 @@ path {
     grid-template-rows: 1fr;
     grid-template-columns: 60% 1fr;
     gap: 32px;
-    margin: 0 32px;
+    margin: 16px auto;
+    max-width: 400px;
 }
 
 .country__images div p { 
@@ -159,4 +160,20 @@ path {
     width: 33%;
     min-height: 100%;
     padding: 32px;
+}
+
+@media screen and (max-width: 748px) {
+    .map {
+        display: none;
+    }
+
+    .country__container,
+    .country__loading-screen,
+    .search__container {
+        width: 100%;
+    }
+
+    .country__information p {
+        font-size: 1.4rem;
+    }
 }
